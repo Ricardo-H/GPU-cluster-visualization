@@ -1,4 +1,4 @@
-<a hreaf="README.md"><button align="right">English</button></a><a hreaf="README_CN.md"><button align="right">Chinese</button></a><a hreaf="README_JP.md"><button align="right">Jpanese</button></a>
+<a hreaf="README.md"><button align="right">English</button></a><a hreaf="[README_CN.md](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_CN.md)"><button align="right">Chinese</button></a><a hreaf="README_JP.md"><button align="right">Jpanese</button></a>
 
 # GPU-cluster-visualization
 
