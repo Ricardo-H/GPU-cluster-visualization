@@ -1,4 +1,6 @@
-<a hreaf="README.md"><button align="right">英语</button></a><a hreaf="README_CN.md"><button align="right">中文</button></a><a hreaf="README_JP.md"><button align="right">日文</button></a>
+[English](https://github.com/Ricardo-H/GPU-cluster-visualization)
+[Chinese](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_CN.md)
+[Jpanese](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_JP.md)
 
 # GPU集群可视化
 
