@@ -1,4 +1,4 @@
-<a hreaf="README_EN.md"><button align="right">英语</button></a><a hreaf="README_CN.md"><button align="right">中文</button></a><a hreaf="README_JP.md"><button align="right">日文</button></a>
+<a hreaf="README.md"><button align="right">英语</button></a><a hreaf="README_CN.md"><button align="right">中文</button></a><a hreaf="README_JP.md"><button align="right">日文</button></a>
 
 # GPU集群可视化
 
