@@ -1,5 +1,5 @@
-[English](https://github.com/Ricardo-H/GPU-cluster-visualization)
-[Chinese](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_CN.md)
+[English](https://github.com/Ricardo-H/GPU-cluster-visualization) |
+[Chinese](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_CN.md) |
 [Jpanese](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_JP.md)
 
 # GPU-cluster-visualization
