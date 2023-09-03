@@ -1,26 +1,40 @@
 [English](https://github.com/Ricardo-H/GPU-cluster-visualization) |
 [Chinese](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_CN.md) |
-[Jpanese](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_JP.md)
+[Japanese](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/main/README_JP.md)
 
-# GPU-cluster-visualization
+# GPU Cluster Visualization
 
+## Project Overview
 
+This project aims to provide real-time visualization and monitoring of the GPU cluster in the laboratory, ensuring the stable operation and performance monitoring of valuable experimental equipment.
+
+## Project Status
+
+Currently, the project has completed its first usable version, and we are actively developing new features and improving existing ones.
 
 ## Project Background
 
-Time: Spring 2023 semester
+Time: Spring Semester 2023
 
-Address: Japan's Ritsumeikan University - Institute of Information Science - Visual Processing Laboratory (VIP)
+Location: College of Information Science and Engineering, Ritsumeikan University - Visual Information Processing Laboratory (VIP)
 
-Members: Youling Huang, Yinan Yang
+This project was developed to meet the needs of the VIP laboratory, which possesses 30 different models of GPUs and requires real-time monitoring of their performance and operational status to ensure the efficient utilization and protection of experimental equipment.
 
-## Project Introduction
+### Members:
+- Yinan Yang: Responsible for GPU data collection and integration.
+- Youling Huang: Responsible for data visualization and monitoring alerts.
 
-The laboratory has 30 different models of GPUs that are convenient for real-time monitoring of each GPU's operation. We have decided to develop a GPU cluster visualization project to protect valuable experimental equipment.
+## Project Components
 
-##### Composition
+1. **Individual GPU Information Collection**
+   Implemented using node_exporter to collect performance and status information for individual GPUs.
 
-1. Collection of individual GPU information - node_exporter
-2. Integrating GPU cluster information and setting up a database - prometheus
-3. Visualizing data - grafana
-4. Monitoring alerts - grafana
+2. **Integration of GPU Cluster Information and Database Setup**
+   Utilizing Prometheus to establish a database for integrating and storing data from the GPU cluster.
+
+3. **Data Visualization**
+   Creating dashboards using Grafana to allow users to visualize the performance and status of the GPU cluster.
+
+4. **Monitoring and Alerts**
+   Setting up monitoring alerts using Grafana to notify users in real-time of any anomalies.
+
