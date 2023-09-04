@@ -82,3 +82,5 @@ http://<Local Machine IP Address>:9835/metrics
 ```
 Here is a display of a portion of the output information stream, which includes the temperature, usage rate, and GPU memory utilization of the GPU with the current UUID.
 <img src="IMG/exporter_example.png"  style="zoom: 30%;" />
+
+## 2. Prometheus Setup
