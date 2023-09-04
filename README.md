@@ -20,6 +20,11 @@ Location: College of Information Science and Engineering, Ritsumeikan University
 
 This project was developed to meet the needs of the VIP laboratory, which possesses 30 different models of GPUs and requires real-time monitoring of their performance and operational status to ensure the efficient utilization and protection of experimental equipment.
 
+### Topology:
+<img src="IMG/Topology.png"  style="zoom: 60%;" />
+The research lab is equipped with multiple campus network exits, where each exit connects through static address dialing based on the routers.
+
+
 ### Members:
 - Yinan Yang: Responsible for GPU data collection and integration.
 - Youling Huang: Responsible for data visualization and monitoring alerts.
@@ -27,7 +32,7 @@ This project was developed to meet the needs of the VIP laboratory, which posses
 ## Project Components
 
 1. **Individual GPU Information Collection**
-   Implemented using node_exporter to collect performance and status information for individual GPUs.
+   Implemented using nvidia-smi(.exe) binary to collect performance and status information for individual GPUs.
 
 2. **Integration of GPU Cluster Information and Database Setup**
    Utilizing Prometheus to establish a database for integrating and storing data from the GPU cluster.
@@ -38,3 +43,6 @@ This project was developed to meet the needs of the VIP laboratory, which posses
 4. **Monitoring and Alerts**
    Setting up monitoring alerts using Grafana to notify users in real-time of any anomalies.
 
+
+
+## 1. GPU Server Information Collect

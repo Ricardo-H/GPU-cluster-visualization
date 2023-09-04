@@ -20,7 +20,7 @@
 
 ##### 构成部品
 
-1. 单个GPU情报の収集 - node_exporter
+1. 单个GPU情报の収集 - nvidia-smi(.exe)
 2. GPU集群情报の整合とデータベースの设定 - prometheus
 3. 可视化データ - grafana
 4. 监诊报警 - grafana

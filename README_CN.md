@@ -28,7 +28,7 @@
 ## 项目组成部分
 
 1. **采集单个GPU信息**  
-           使用node_exporter实现，用于收集单个GPU的性能和状态信息。
+           使用nvidia-smi(.exe) docker binary实现，用于收集单个GPU的性能和状态信息。
 3. **整合GPU集群信息，搭建数据库**  
          使用Prometheus建立数据库，整合和存储GPU集群数据。
 5. **可视化数据**  
