@@ -1,5 +1,5 @@
 #!/bin/bash
-#file:docker_install.sh
+#file:gpu_server.sh
 
 # GLOBAL VARIABLE
 CONTAINER_NAME="nvidia_smi_exporter"
@@ -10,7 +10,6 @@ VOL2="/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.1"
 VOL3="/usr/bin/nvidia-smi"
 PORT=9835
 IMAGE_NAME="utkuozdemir/nvidia_gpu_exporter:1.2.0"
-
 
 function gpu_driver_check()
 {
@@ -48,41 +47,51 @@ function docker_install()
         bash test-docker.sh
         echo "Installing the docker environment... Installation complete!"
     fi
-
 }
 
+function create_docker_gpu_command()
+{
+    # check the number of gpu
+    gpu_count=$(nvidia-smi -L | wc -l)
+    echo "GPU count: $gpu_count"
+
+    # ADD GPU to docker command
+    GPU=""
+    gpu_count=$(($gpu_count-1))
+    for i in $(seq 0 $gpu_count)
+    do
+        GPU="${GPU} --device /dev/nvidia${i}:/dev/nvidia${i}"
+    done
+}
+
+function create_docker_command()
+{
+    # docker command
+    docker_run_command="sudo docker run -d \
+    --name $CONTAINER_NAME \
+    --restart $RESTART \
+    --device $NVIDIACTL:$NVIDIACTL \
+    $GPU \
+    -v $VOL1:$VOL1 \
+    -v $VOL2:$VOL2 \
+    -v $VOL3:$VOL3 \
+    -p $PORT:$PORT \
+    $IMAGE_NAME"
+    echo "Running command: $docker_run_command"
+}
 
 # executable env function
 gpu_driver_check
 docker_install
 env_install
-
-
-
-# check the number of gpu
-gpu_count=$(nvidia-smi -L | wc -l)
-echo "GPU count: $gpu_count"
-
-# ADD GPU to docker
-GPU=""
-gpu_count=$(($gpu_count-1))
-for i in $(seq 0 $gpu_count)
-do
-  GPU="${GPU} --device /dev/nvidia${i}:/dev/nvidia${i}"
-done
-
-# docker command
-docker_run_command="sudo docker run -d \
---name $CONTAINER_NAME \
---restart $RESTART \
---device $NVIDIACTL:$NVIDIACTL \
-$GPU \
--v $VOL1:$VOL1 \
--v $VOL2:$VOL2 \
--v $VOL3:$VOL3 \
--p $PORT:$PORT \
-$IMAGE_NAME"
-echo "Running command: $docker_run_command"
+create_docker_gpu_command
+create_docker_command
 
 # run docker
 eval $docker_run_command
+
+
+
+
+
+
