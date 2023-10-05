@@ -33,7 +33,7 @@
    之后有以下两个选择(根据需求任选其一)
 
    + 使用固定模板,输入dashboard ID   **19714**	(缺点是不能自由更改面板)
-   + 导入json文件,首先点击下载面板配置文件[Multi_GPU.json](GPU-cluster-visualization\dashboard_for_grafana\Multi_GPU.json),随后导入grafana
+   + 导入json文件,首先点击下载面板配置文件[Multi_GPU.json](https://github.com/Ricardo-H/GPU-cluster-visualization/blob/1c8761db319b40617f0b85856e088d18c5b867ee/dashboard_for_grafana/Multi_GPU.json),随后导入grafana
 
    选择步骤6已经配置好的数据源 Prometheus
 8. **停止和删除容器**:
